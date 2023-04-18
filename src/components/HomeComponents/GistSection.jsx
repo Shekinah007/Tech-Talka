@@ -7,22 +7,51 @@ import avatar4 from "../../assets/images/avatarImgs/Ellipse 1-3.png";
 import avatar5 from "../../assets/images/avatarImgs/Ellipse 1-4.png";
 import avatar6 from "../../assets/images/avatarImgs/Ellipse 1-5.png";
 
+import cardImg from "../../assets/images/gistImages/Media.png";
+import cardImg1 from "../../assets/images/gistImages/Media-1.png";
+import cardImg2 from "../../assets/images/gistImages/Media-2.png";
+import cardImg3 from "../../assets/images/gistImages/Media-3.png";
+import cardImg4 from "../../assets/images/gistImages/Media-4.png";
+import cardImg5 from "../../assets/images/gistImages/Media-5.png";
+
 const BlogCard = ({ position, background, image }) => {
   return (
-    <div
-      className={` card  ${background} w-[330px] flex flex-col gap-2 md:w-56 rounded-lg p-2 text-xs self-center  ${position}`}
-    >
-      <div className="flex h-[67px] md:h-[40px] gap-2 items-center">
-        <img src={image} className="w-8" />
-        <h2 className="font-semibold">Blog Title</h2>
+    // <div
+    //   className={` card  ${background} w-[330px] flex flex-col gap-2 md:w-56 rounded-lg p-2 text-xs self-center  ${position}`}
+    // >
+    //   <div className="flex h-[67px] md:h-[40px] gap-2 items-center">
+    //     <img src={image} className="w-8" />
+    //     <h2 className="font-semibold">Blog Title</h2>
+    //   </div>
+    //   <p>
+    //     Lorem ipsum dolor sit amet consectetur. Cursus sed una non vel turpis
+    //     sit.
+    //   </p>
+    //   <a href="#" className="italic font-semibold text-gray-600">
+    //     Learn More
+    //   </a>
+    // </div>
+    <div className="card bg-white rounded-lg w-[360px]">
+      <img src={cardImg} alt=" " className=" w-[full] rounded-t-lg" />
+      <div className="flex flex-col gap-3 p-3">
+        <h2 className="text-[24px] font-extrabold">Blog Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Cursus sed urna non vel turpis
+          sit.
+        </p>
+        <div className="flex justify-between">
+          <div className="flex gap-3">
+            <div className="h-[50px] w-[50px] overflow-hidden rounded-full">
+              <img src={avatar1} className="" />
+            </div>
+            <div className="flex flex-col justify-between">
+              <h3 className="font-bold">Brooklyn Simmons</h3>
+              <p>8/30/14</p>
+            </div>
+          </div>
+          <i class="fa fa-2x fa-share-alt"></i>
+        </div>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur. Cursus sed una non vel turpis
-        sit.
-      </p>
-      <a href="#" className="italic font-semibold text-gray-600">
-        Learn More
-      </a>
     </div>
   );
 };
@@ -33,6 +62,8 @@ const GistSection = () => {
       <h2 className="font-bold text-3xl md:text-4xl self-start md:self-center">
         More Tech Gist
       </h2>
+      <BlogCard />
+
       {/* <div className="flex flex-col  md:flex-row gap-72 md:gap-6 h-[800px] justify-center md:h-[600px] items-center animation-right">
         <div className="w-[400px] flex flex-col md:flex-col gap-3 h-[200px]  md:h-[500px] md:justify-center px-2 md:px-0">
           <BlogCard

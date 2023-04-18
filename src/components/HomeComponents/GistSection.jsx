@@ -49,7 +49,8 @@ const BlogCard = ({ position, background, image }) => {
               <p>8/30/14</p>
             </div>
           </div>
-          <i class="fa fa-2x fa-share-alt"></i>
+          {/* <i class="fa fa-2x fa-share-alt"></i> */}
+          <box-icon type="solid" name="share-alt"></box-icon>
         </div>
       </div>
     </div>

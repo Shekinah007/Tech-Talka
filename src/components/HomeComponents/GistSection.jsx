@@ -33,7 +33,7 @@ const GistSection = () => {
       <h2 className="font-bold text-3xl md:text-4xl self-start md:self-center">
         More Tech Gist
       </h2>
-      <div className="flex flex-col  md:flex-row gap-72 md:gap-6 h-[800px] justify-center md:h-[600px] items-center animation-right">
+      {/* <div className="flex flex-col  md:flex-row gap-72 md:gap-6 h-[800px] justify-center md:h-[600px] items-center animation-right">
         <div className="w-[400px] flex flex-col md:flex-col gap-3 h-[200px]  md:h-[500px] md:justify-center px-2 md:px-0">
           <BlogCard
             position="md:self-end"
@@ -91,7 +91,7 @@ const GistSection = () => {
             image={avatar6}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

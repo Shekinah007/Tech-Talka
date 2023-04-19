@@ -3,7 +3,7 @@ import techTalkerIcon from "../assets/icons/Content.png";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-fuchsia-200 p-2 rounded-2xl flex items-center justify-between font-semibold text-sm w-11/12">
+    <div className="navbar bg-fuchsia-200 p-2 rounded-2xl flex items-center justify-between font-semibold text-sm w-11/12 sticky top-0">
       {/* <p className="p-0 m-0">TechTalker</p> */}
       <img src={techTalkerIcon} className="h-8" />
       <input

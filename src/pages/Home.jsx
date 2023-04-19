@@ -73,7 +73,7 @@ const Home = () => {
               Lorem ipsur dolor sit amet consectetur.
             </p>
             <button>
-              <i className="fa fa-3x fa-arrow-circle-o-right text-fuchsia-700 rounded-3xl w-12 h-12 flex items-center justify-center card"></i>
+              <i className="bx bx-right-arrow-alt bx-lg text-fuchsia-700 rounded-3xl w-12 h-12 flex items-center justify-center card"></i>
             </button>
           </div>
           <img src={mainImg} className="object-contain"></img>

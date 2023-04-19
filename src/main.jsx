@@ -3,9 +3,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import Blog from "./pages/Blog";
+// import Blog from "./pages/Blog";
 import ErrorPage from "./pages/ErrorPage";
-import GistSection from "./components/HomeComponents/GistSection";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +12,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
   },
-  { path: "/blog", element: <Blog /> },
+  // { path: "/blog", element: <Blog /> },
 ]);
 
 // const home = createBrowserRouter([

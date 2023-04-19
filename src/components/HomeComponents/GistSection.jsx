@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import gistImage from "../../assets/images/Free Photo _ Top view.png";
 import avatar1 from "../../assets/images/avatarImgs/Ellipse 1.png";
 import avatar2 from "../../assets/images/avatarImgs/Ellipse 1-1.png";
@@ -62,6 +63,9 @@ const GistSection = () => {
           <BlogCard image={cardImg5} avatarImg={avatar6} />
         </div>
       </div>
+      <Link to={"/"} className="text-[#9C02C9] text-xl font-bold">
+        Read More Articles
+      </Link>
     </div>
   );
 };

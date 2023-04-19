@@ -1,10 +1,30 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+import App from "./App";
+import Blog from "./pages/Blog";
+import ErrorPage from "./pages/ErrorPage";
+import GistSection from "./components/HomeComponents/GistSection";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  { path: "/blog", element: <Blog /> },
+]);
+
+// const home = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />,
+//   },
+// ]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);

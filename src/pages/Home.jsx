@@ -10,6 +10,7 @@ import GistSection from "../components/HomeComponents/GistSection";
 import Categories from "../components/HomeComponents/Categories";
 import SocialProof from "../components/HomeComponents/SocialProof";
 import NewsLetter from "../components/HomeComponents/NewsLetter";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   useEffect(() => {
@@ -72,9 +73,9 @@ const Home = () => {
             <p className="text-gray-500 font-semibold text-sm">
               Lorem ipsur dolor sit amet consectetur.
             </p>
-            <button>
+            <Link to={"/Blog"}>
               <i className="bx bx-right-arrow-alt bx-lg text-fuchsia-700 rounded-3xl w-12 h-12 flex items-center justify-center card"></i>
-            </button>
+            </Link>
           </div>
           <img src={mainImg} className="object-contain"></img>
         </div>

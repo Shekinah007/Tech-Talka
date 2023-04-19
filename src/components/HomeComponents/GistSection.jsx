@@ -14,7 +14,7 @@ import cardImg3 from "../../assets/images/gistImages/Media-3.png";
 import cardImg4 from "../../assets/images/gistImages/Media-4.png";
 import cardImg5 from "../../assets/images/gistImages/Media-5.png";
 
-const BlogCard = ({ position, background, image }) => {
+const BlogCard = ({ image, avatarImg, title }) => {
   return (
     // <div
     //   className={` card  ${background} w-[330px] flex flex-col gap-2 md:w-56 rounded-lg p-2 text-xs self-center  ${position}`}
@@ -31,26 +31,27 @@ const BlogCard = ({ position, background, image }) => {
     //     Learn More
     //   </a>
     // </div>
-    <div className="card bg-white rounded-lg w-[360px]">
-      <img src={cardImg} alt=" " className=" w-[full] rounded-t-lg" />
+    <div className="card bg-white rounded-lg w-[320px]">
+      <img src={image} alt=" " className=" w-[full] rounded-t-lg" />
       <div className="flex flex-col gap-3 p-3">
-        <h2 className="text-[24px] font-extrabold">Blog Title</h2>
-        <p>
+        <h2 className="text-[22px] font-extrabold">Blog Title</h2>
+        <p className="text-sm text-gray-500">
           Lorem ipsum dolor sit amet consectetur. Cursus sed urna non vel turpis
           sit.
         </p>
-        <div className="flex justify-between">
+        <div className="flex flex-row justify-between items-center ">
           <div className="flex gap-3">
             <div className="h-[50px] w-[50px] overflow-hidden rounded-full">
-              <img src={avatar1} className="" />
+              <img src={avatarImg} className="" />
             </div>
             <div className="flex flex-col justify-between">
-              <h3 className="font-bold">Brooklyn Simmons</h3>
-              <p>8/30/14</p>
+              <h3 className="font-bold text-sm">Brooklyn Simmons</h3>
+              <p className="text-sm">8/30/14</p>
             </div>
           </div>
-          {/* <i class="fa fa-2x fa-share-alt"></i> */}
-          <box-icon type="solid" name="share-alt"></box-icon>
+          <button className="">
+            <box-icon name="share-alt"></box-icon>
+          </button>
         </div>
       </div>
     </div>
@@ -59,11 +60,23 @@ const BlogCard = ({ position, background, image }) => {
 
 const GistSection = () => {
   return (
-    <div className=" more-gist flex flex-col items-center justify-center bg-gray-100 w-full h-[1200px] md:h-[900px] gap-[120px] md:gap-[3px] z-10 px-10 md:px-20 ">
+    <div className="more-gist flex flex-col items-center justify-center bg-gray-100 w-full py-[120px] gap-[20px] z-10 px-10 md:px-20 ">
       <h2 className="font-bold text-3xl md:text-4xl self-start md:self-center">
         More Tech Gist
       </h2>
-      <BlogCard />
+      <div className="flex flex-wrap gap-6  justify-center">
+        <div className="flex flex-row flex-wrap gap-6 justify-center">
+          <BlogCard image={cardImg} avatarImg={avatar1} />
+          <BlogCard image={cardImg1} avatarImg={avatar2} />
+          <BlogCard image={cardImg2} avatarImg={avatar3} />
+        </div>
+
+        <div className="flex flex-row flex-wrap gap-6 justify-center">
+          <BlogCard image={cardImg3} avatarImg={avatar4} />
+          <BlogCard image={cardImg4} avatarImg={avatar5} />
+          <BlogCard image={cardImg5} avatarImg={avatar6} />
+        </div>
+      </div>
 
       {/* <div className="flex flex-col  md:flex-row gap-72 md:gap-6 h-[800px] justify-center md:h-[600px] items-center animation-right">
         <div className="w-[400px] flex flex-col md:flex-col gap-3 h-[200px]  md:h-[500px] md:justify-center px-2 md:px-0">

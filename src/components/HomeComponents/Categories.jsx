@@ -7,7 +7,7 @@ import aiImg from "../../assets/images/Frame 23.png";
 
 const Categories = () => {
   return (
-    <div className="categories w-11/12 flex flex-col gap-4 py-32 pb-10 ">
+    <div className="categories w-11/12 flex flex-col gap-4 py-32 pb-5 md:pb-10 ">
       <div className="flex flex-col md:flex-row gap-3 justify-between">
         <h2 className="font-bold text-4xl">Categories</h2>
         <div className="flex gap-2 text-xl font-semibold">

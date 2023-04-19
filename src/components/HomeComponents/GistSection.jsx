@@ -46,7 +46,7 @@ const BlogCard = ({ image, avatarImg, title }) => {
 
 const GistSection = () => {
   return (
-    <div className="more-gist flex flex-col items-center justify-center bg-gray-100 w-full py-[120px] gap-[20px] z-10 px-10 md:px-20 animation-fade ">
+    <div className="more-gist flex flex-col items-center justify-center bg-gray-100 w-full py-10 md:py-[120px] gap-[20px] z-10 px-10 md:px-20 animation-fade ">
       <h2 className="font-bold text-3xl md:text-4xl self-start md:self-center">
         More Tech Gist
       </h2>

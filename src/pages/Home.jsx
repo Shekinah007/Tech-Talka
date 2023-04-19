@@ -28,7 +28,7 @@ const Home = () => {
           }
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.2 }
     );
 
     for (let i = 0; i < the_animation.length; i++) {

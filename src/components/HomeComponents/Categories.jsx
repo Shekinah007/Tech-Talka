@@ -37,7 +37,7 @@ const Categories = () => {
           </a>
         </div>
       </div>
-      <div className="categories-images flex  whitespace-nowrap flex-row overflow-y-hidden  overflow-x-scroll md:overflow-hidden  gap-4  md:grid md:grid-cols-3 animation-bottom">
+      <div className="categories-images flex  whitespace-nowrap flex-row overflow-y-hidden  overflow-x-scroll md:overflow-hidden  gap-4  md:grid md:grid-cols-3 animation-right">
         <div className="hidden md:flex h-[390px] flex-col gap-[20px] col-span-2">
           <div class="grid grid-cols-2 gap-2">
             <a href="#" className="">

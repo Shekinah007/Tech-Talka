@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   useEffect(() => {
     let the_animation = document.querySelectorAll(
-      ".animation, .animation-right, .animation-bottom "
+      ".animation, .animation-right, .animation-left, .animation-bottom, .animation-fade "
     );
 
     const observer = new IntersectionObserver(
@@ -28,7 +28,7 @@ const Home = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.4 }
     );
 
     for (let i = 0; i < the_animation.length; i++) {
@@ -74,7 +74,7 @@ const Home = () => {
               Lorem ipsur dolor sit amet consectetur.
             </p>
             <Link to={"/Blog"}>
-              <i className="bx bx-right-arrow-alt bx-lg text-fuchsia-700 rounded-3xl w-12 h-12 flex items-center justify-center card"></i>
+              <i className="bx bx-right-arrow-alt bx-lg  bx-fade-right text-fuchsia-700 rounded-3xl w-12 h-12 flex items-center justify-center card"></i>
             </Link>
           </div>
           <img src={mainImg} className="object-contain"></img>

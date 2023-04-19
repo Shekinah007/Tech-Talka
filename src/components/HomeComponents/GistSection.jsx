@@ -46,18 +46,18 @@ const BlogCard = ({ image, avatarImg, title }) => {
 
 const GistSection = () => {
   return (
-    <div className="more-gist flex flex-col items-center justify-center bg-gray-100 w-full py-[120px] gap-[20px] z-10 px-10 md:px-20 ">
+    <div className="more-gist flex flex-col items-center justify-center bg-gray-100 w-full py-[120px] gap-[20px] z-10 px-10 md:px-20 animation-fade ">
       <h2 className="font-bold text-3xl md:text-4xl self-start md:self-center">
         More Tech Gist
       </h2>
       <div className="flex flex-wrap gap-6  justify-center">
-        <div className="flex flex-row flex-wrap gap-6 justify-center">
+        <div className="gist flex flex-row flex-wrap gap-6 justify-center ">
           <BlogCard image={cardImg} avatarImg={avatar1} />
           <BlogCard image={cardImg1} avatarImg={avatar2} />
           <BlogCard image={cardImg2} avatarImg={avatar3} />
         </div>
 
-        <div className="hidden lg:flex flex-row flex-wrap  gap-6 justify-center">
+        <div className="gist hidden lg:flex flex-row flex-wrap  gap-6 justify-center ">
           <BlogCard image={cardImg3} avatarImg={avatar4} />
           <BlogCard image={cardImg4} avatarImg={avatar5} />
           <BlogCard image={cardImg5} avatarImg={avatar6} />

@@ -1,20 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import NewsLetter from "../components/HomeComponents/NewsLetter";
 import Footer from "../components/Footer";
 import avatarImg from "../assets/images/avatarImgs/Ellipse 1-1.png";
 import rectImg from "../assets/images/blogPageImages/Rectangle 30.png";
 import img2 from "../assets/images/blogPageImages/Image-2.png";
+import img1 from "../assets/images/blogPageImages/Image-1.png";
 
 const BlogPage = () => {
+  useEffect(() => {
+    let page = document.querySelectorAll(".page");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("page-animation");
+        } else {
+          entry.target.classList.remove("page-animation");
+        }
+      });
+    });
+
+    for (let i = 0; i < page.length; i++) {
+      const elements = page[i];
+
+      observer.observe(elements);
+    }
+  });
+
   return (
-    <div className="flex flex-col items-center pt-4">
+    <div className="page flex flex-col items-center pt-4 bg-gray-100 overflow-x-hidden">
       <Navbar />
-      <div className="flex flex-col items-center p-5 md:p-20 text-center gap-4">
+      <div className="flex flex-col items-center p-5 md:p-20 text-center gap-4 ">
         <p className="card p-2 text-[#9C02C9] font-semibold rounded-3xl border-b-2 border-[#9C02C9]">
           Investment
         </p>
-        <h1 className="font-bold text-4xl text-center">
+        <h1 className="font-bold text-3xl md:text-4xl text-center">
           Lorem ipsur dolor sit amet consectetur. Maecenas non suspendisse dui
           et.
         </h1>
@@ -39,7 +60,7 @@ const BlogPage = () => {
           </button>
         </div>
       </div>
-      <div className="px-4 md:px-36 flex flex-col items-center gap-5 text-gray-500">
+      <div className="px-4 md:px-36 py-1 flex flex-col items-center gap-8 text-sm text-gray-500">
         <img src={rectImg} alt=" " className="w-full" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -74,6 +95,14 @@ const BlogPage = () => {
           <p className="text-gray-500 text-xs">
             Image courtesy of Laura Davidson via Unsplash
           </p>
+        </div>
+        <div className="flex flex-col gap-2 border-l-2 border-fuchsia-600 p-4 font-bold">
+          <p className="italic text-black text-lg">
+            "In a world more older and complete than ours they move finished and
+            complete, gifted with extensions of the senses we have lost or never
+            attained, living by voices we shall never hear."
+          </p>
+          <p className="text-xs"> - Olivia Rhye, Product Designer</p>
         </div>
         <p>
           Dui accumsan sit amet nulla facilisi morbi. Egestas dui id ornare arcu
@@ -118,8 +147,84 @@ const BlogPage = () => {
               1. Lectus id duis vitae portitor enim{" "}
               <span className="underline">graida morbi</span>.
             </li>
-            <li>2. Eu turpis</li>
+            <li>
+              2. Eu turpis <span className="underline">posuere feugiat</span>{" "}
+              volupat elit, ultrices suspendisse. Aucutor vel in vitae placerat.{" "}
+            </li>
+            <li>
+              3. Suspendisse maecenas ac{" "}
+              <span className="underline">donec sclerisque</span> diam sed est
+              duis purus.
+            </li>
           </ol>
+        </div>
+        <div className="flex flex-col gap-2">
+          <img src={img1} alt=" " className="full" />
+          <p>Image courtesy of Leon via Unsplash</p>
+        </div>
+        <p>
+          Libero nunc consequat interdum varius. Placerat vestibulum lectus
+          mauris ultrices eros in cursus. Vestibulum rhoncus est pellentesque
+          elit ullamcorper dignissim. Nulla malesuada pellentesque elit eget
+          gravida cum sociis natoque penatibus. In vitae turpis massa sed
+          elementum tempus egestas sed sed. Morbi tincidunt augue interdum velit
+          euismod. Porta lorem mollis aliquam ut porttitor leo a. Est ante in
+          nibh mauris cursus mattis molestie.
+        </p>
+        <p>
+          Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Nulla
+          malesuada pellentesque elit eget gravida cum sociis natoque penatibus.
+          In vitae turpis massa sed elementum tempus egestas sed sed. Libero
+          nunc consequat interdum varius. Placerat vestibulum lectus mauris
+          ultrices eros in cursus. Vestibulum rhoncus est pellentesque elit
+          ullamcorper dignissim.
+        </p>
+
+        <div className="flex flex-col gap-4 bg-white p-5 md:p-10 rounded-lg">
+          <h3 className="text-xl font-bold text-black">Conclusion</h3>
+          <p>
+            Elementum sagittis vitae et leo duis ut diam. Integer quis auctor
+            elit sed vulputate mi sit amet. Duis ut diam quam nulla porttitor
+            massa. Id porta nibh venenatis cras. Libero id faucibus nisl
+            tincidunt eget nullam non nisi est. Eu ultrices vitae auctor eu
+            augue ut lectus. Erat velit scelerisque in dictum non consectetur a
+            erat nam. Nulla facilisi cras fermentum odio eu feugiat.
+          </p>
+          <p>
+            Adipiscing elit duis tristique sollicitudin nibh sit amet commodo
+            nulla. Molestie nunc non blandit massa enim nec dui. Parturient
+            montes nascetur ridiculus mus mauris vitae ultricies leo integer.
+            Diam quis enim lobortis scelerisque fermentum dui.
+          </p>
+          <p>
+            Molestie nunc non blandit massa enim nec dui. Parturient montes
+            nascetur ridiculus mus mauris vitae ultricies leo integer. Diam quis
+            enim lobortis scelerisque fermentum dui. Adipiscing elit duis
+            tristique sollicitudin nibh sit amet commodo nulla. Erat velit
+            scelerisque in dictum non consectetur a erat nam. Nulla facilisi
+            cras fermentum odio eu feugiat.
+          </p>
+          <p>
+            {" "}
+            Erat velit scelerisque in dictum non consectetur a erat nam. Nulla
+            facilisi cras fermentum odio eu feugiat.
+          </p>
+        </div>
+        <hr className="w-full" />
+        <div className="flex items-center gap-2 self-end">
+          <button className="card flex items-center rounded-md p-1 gap-2 text-md font-semibold">
+            <i className="bx bx-copy bx-sm"></i>
+            <span>Copy link</span>
+          </button>
+          <a href="#" className="card rounded-md flex items-center p-1">
+            <i className="bx bxl-twitter bx-sm"></i>
+          </a>
+          <a href="#" className="card rounded-md flex items-center p-1">
+            <i className="bx bxl-facebook-circle bx-sm"></i>
+          </a>
+          <a href="#" className="card rounded-md flex items-center p-1">
+            <i className="bx bxl-linkedin-square bx-sm"></i>
+          </a>
         </div>
       </div>
       <NewsLetter />

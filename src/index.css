@@ -7,7 +7,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-
 }
 
 body, html {
@@ -83,14 +82,15 @@ a:hover {
 
 .page {
   opacity: 0;
-  transform: translateY(-100px);
-  transition: all 0.7s ease-out;
+  transform: translateX(20px);
+  /* transition: all 0.7s ease-out; */
 }
 
 .page-animation {
   opacity: 1;
-  transform: translateY(0px);
-  transition: all 0.7s ease-out;
+  transform: translateX(0px);
+  transition: 0.5s;
+  /* transition: all 0.5s ease-in; */
 }
 
 .show-to-top {

@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsLetter = () => {
   return (
-    <div className="newsletter flex flex-col md:flex-row gap-8 justify-between  w-full p-16 px-12">
+    <div className="newsletter flex flex-col md:flex-row gap-8 justify-between  w-full p-16 px-12 bg-gray-100">
       <div className="flex flex-col gap-3">
         <h2 className="text-2xl font-bold">Sign up for our newsletter</h2>
         <p className="text-gray-500 text-sm">

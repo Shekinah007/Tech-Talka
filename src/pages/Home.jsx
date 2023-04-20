@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   useEffect(() => {
     let the_animation = document.querySelectorAll(
-      ".animation, .animation-right, .animation-left, .animation-bottom, .animation-fade "
+      ".animation, .animation-right, .animation-left, .animation-bottom, .animation-fade"
     );
 
     const observer = new IntersectionObserver(

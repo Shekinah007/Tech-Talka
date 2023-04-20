@@ -11,7 +11,7 @@ import App from "./App";
 import ErrorPage from "./pages/ErrorPage";
 import BlogPage from "./pages/BlogPage";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,

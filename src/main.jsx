@@ -18,7 +18,7 @@ const router = createHashRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/blog",
+    path: "/blog/:blogId",
     element: <BlogPage />,
   },
 ]);

@@ -13,6 +13,43 @@ import NewsLetter from "../components/HomeComponents/NewsLetter";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    // fetch("https://jsonplaceholder.typicode.com/todos/1")
+    //   .then((response) => response.json())
+    //   .then((json) => {
+    //     console.log("PlcaeHolder");
+    //     console.log(json);
+    //   });
+
+    // fetch("https://tek-talka.onrender.com/api/blog-posts?pagination[page]=1")
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log("Posts: ", data);
+    //     console.log("Blogs: ", data.data);
+    //     setBlogs(data.data);
+    //   });
+
+    fetch("https://tek-talka.onrender.com/api/blog-posts?populate=*")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Populate: ", data.data);
+        console.log("Blogs: ", data.data);
+        setBlogs(data.data);
+      });
+
+    // fetch(
+    //   "https://tek-talka.onrender.com/api/blog-posts-categories?pagination[page]=1"
+    // )
+    //   .then((res) => res.json())
+    //   .then((data) => console.log("Categories: ", data));
+
+    // fetch("https://tek-talka.onrender.com/api/authors")
+    //   .then((res) => res.json())
+    //   .then((data) => console.log("Authors: ", data));
+  }, []);
+
   useEffect(() => {
     let the_animation = document.querySelectorAll(
       ".animation, .animation-right, .animation-left, .animation-bottom, .animation-fade"
@@ -86,7 +123,7 @@ const Home = () => {
 
         <div className="scroll-point flex flex-col w-full items-center">
           <Categories />
-          <GistSection />
+          <GistSection blogs={blogs} />
           <SocialProof />
           <NewsLetter />
           <Footer />

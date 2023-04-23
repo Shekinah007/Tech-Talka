@@ -39,7 +39,7 @@ const Categories = () => {
       </div>
       <div className="categories-images flex  whitespace-nowrap flex-row overflow-y-hidden  overflow-x-scroll md:overflow-hidden  gap-4  md:grid md:grid-cols-3 animation-right">
         <div className="hidden md:flex h-[390px] flex-col gap-[20px] col-span-2">
-          <div class="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2">
             <a href="#" className="">
               <img
                 src={artImg}
@@ -54,7 +54,7 @@ const Categories = () => {
             </a>
           </div>
           <div>
-            <div class="grid gap-2 grid-cols-3">
+            <div className="grid gap-2 grid-cols-3">
               <a href="#" className="col-span-2">
                 <img
                   src={startUpImg}
@@ -98,12 +98,12 @@ const Categories = () => {
         </a>
         <div className="flex gap-2">
           <a href="#" className="card rounded-full fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x text-green-500"></i>
-            <i class="fa fa-arrow-left fa-stack-1x"></i>
+            <i className="fa fa-circle fa-stack-2x text-green-500"></i>
+            <i className="fa fa-arrow-left fa-stack-1x"></i>
           </a>
           <a href="#" className="card rounded-full fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x text-green-500"></i>
-            <i class="fa fa-arrow-right fa-stack-1x"></i>
+            <i className="fa fa-circle fa-stack-2x text-green-500"></i>
+            <i className="fa fa-arrow-right fa-stack-1x"></i>
           </a>
         </div>
       </div>

@@ -32,22 +32,24 @@ const BlogCard = ({
     >
       <img src={image} alt=" " className=" w-[full] rounded-t-lg" />
       <div className="flex flex-col gap-3 p-3">
-        <h2 className="text-[22px] font-extrabold whitespace-nowrap overflow-hidden text-ellipsis">
+        <h2 className="text-[22px] font-extrabold font-wix whitespace-nowrap overflow-hidden text-ellipsis">
           {title}
         </h2>
-        <p className="blog-description text-lg text-gray-500">
+        <p className="blog-description font-montserrat text-md sm:text-lg text-gray-500">
           {/* Lorem ipsum dolor sit amet consectetur. Cursus sed urna non vel turpis
           sit. */}
           {description}
         </p>
-        <div className="flex flex-row justify-between items-center ">
+        <div className="flex flex-row mt-4 justify-between items-center ">
           <div className="flex gap-3">
             <div className="h-[50px] w-[50px] overflow-hidden rounded-full">
               <img src={avatarImg} className="" />
             </div>
             <div className="flex flex-col justify-between">
-              <h3 className="font-bold text-sm">{author}</h3>
-              <p className="text-sm">{datePublished}</p>
+              <p className="font-bold text-gray-500 font-wix text-sm">
+                {author}
+              </p>
+              <p className="text-sm font-wix">{datePublished}</p>
             </div>
           </div>
           <button className="">
@@ -94,7 +96,7 @@ const GistSection = ({ blogs }) => {
           <BlogCard image={cardImg5} avatarImg={avatar6} />
         </div>
       </div>
-      <Link to={"/"} className="text-[#9C02C9] text-xl font-bold">
+      <Link to={"/"} className="font-wix text-[#9C02C9] text-xl font-bold">
         Read More Articles
       </Link>
     </div>

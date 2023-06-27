@@ -103,12 +103,12 @@ const Home = () => {
         <Navbar />
 
         <div className="flex flex-col gap-7 mt-8 w-11/12 z-10">
-          <div className="text-[57px] font-bold w-full md:w-[482px] leading-[56px]">
-            Lorem ipsur dolor sit amet consectetur.
+          <div className="text-[57px] font-bold w-full md:w-[482px] font-wix leading-[56px]">
+            Tech at your fingertips{" "}
           </div>
           <div className="flex items-center justify-between">
-            <p className="text-gray-500 font-semibold text-sm">
-              Lorem ipsur dolor sit amet consectetur.
+            <p className="text-gray-500 font-dmSans font-semibold text-sm">
+              Tech. Startup and more
             </p>
             <Link to={"/Blog"}>
               <i className="bx bx-right-arrow-alt bx-lg  bx-fade-right text-fuchsia-700 rounded-3xl w-12 h-12 flex items-center justify-center card"></i>
@@ -124,7 +124,7 @@ const Home = () => {
         <div className="scroll-point flex flex-col w-full items-center">
           <Categories />
           <GistSection blogs={blogs} />
-          <SocialProof />
+
           <NewsLetter />
           <Footer />
         </div>

@@ -5,33 +5,34 @@ import agroImg from "../../assets/images/Frame 21.png";
 import startUpImg from "../../assets/images/Frame 22.png";
 import aiImg from "../../assets/images/Frame 23.png";
 
+//reasses categories to get all four top categories
 const Categories = () => {
   return (
     <div className="categories w-11/12 flex flex-col gap-4 py-32 pb-5 md:pb-10 ">
       <div className="flex flex-col md:flex-row gap-3 justify-between">
-        <h2 className="font-bold text-4xl">Categories</h2>
-        <div className="flex gap-2 text-xl font-semibold">
+        <h2 className="font-bold font-wix text-4xl">Categories</h2>
+        <div className="flex gap-2 text-xl font-wix font-semibold">
           <a
             href="#"
-            className="rounded-lg p-1 bg-green-400 hover:bg-green-400 duration-500 hover:no-underline"
+            className="rounded-lg font-wix p-1 bg-green-400 hover:bg-green-400 duration-500 hover:no-underline"
           >
             All
           </a>
           <a
             href="#"
-            className="rounded-lg p-1 hover:bg-green-400 duration-500 hover:no-underline"
+            className="rounded-lg p-1 font-wix hover:bg-green-400 duration-500 hover:no-underline"
           >
             Trending
           </a>
           <a
             href="#"
-            className="rounded-lg p-1 hover:bg-green-400 duration-500 hover:no-underline"
+            className="rounded-lg p-1 font-wix hover:bg-green-400 duration-500 hover:no-underline"
           >
             Start Ups
           </a>
           <a
             href="#"
-            className="rounded-lg p-1 hover:bg-green-400 duration-500 hover:no-underline"
+            className="rounded-lg p-1 font-wix hover:bg-green-400 duration-500 hover:no-underline"
           >
             Tech
           </a>
